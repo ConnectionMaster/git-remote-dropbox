@@ -47,7 +47,10 @@ extra-dependencies = [
 ]
 
 [tool.hatch.envs.types.scripts]
-check = "mypy --strict {args:src tests}"
+check = "mypy {args:src tests}"
+
+[tool.mypy]
+strict = true
 
 [tool.ruff.lint]
 ignore = [
